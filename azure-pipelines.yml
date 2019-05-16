@@ -37,3 +37,11 @@ steps:
   inputs:
     contents: '_buildOutput\**'
     targetFolder: "C:/Temp"
+    
+  
+ - task: GithubRelease@0 
+  displayName: 'TestVeriPark Github Release'      
+  inputs:
+    githubConnection: Chaits358
+    repositoryName: Chaits358/Output-TestVeriPark           
+    assets: $(Build.ArtifactStagingDirectory)/*.*
