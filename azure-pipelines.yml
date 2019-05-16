@@ -33,15 +33,5 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: CopyFiles@2
-  displayName: 'Copy generated content'
-  inputs: 
-    SourceFolder: '$(Build.SourcesDirectory)/output'
-    contents: '**\*' 
-    targetFolder: $(Build.ArtifactStagingDirectory)/outpout
-    cleanTargetFolder: true
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact'
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
+ 
